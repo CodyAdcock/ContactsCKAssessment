@@ -14,8 +14,14 @@ class ContactController{
     static let shared = ContactController()
     private init(){}
     
-    var contacts: [Contact] = []
+    var contacts: [Contact] = []{
+        didSet{
+            NotificationCenter.default.post(name: contactsWereUpdatedNotification, object: nil)
+        }
+    }
     var contact: Contact?
+    
+    let contactsWereUpdatedNotification = Notification.Name("ContactsWereUpdated")
 
         //create and save
     func createContact(name: String, phoneNumber: String, email: String, completion: ((Contact?) -> Void)?){
@@ -30,7 +36,7 @@ class ContactController{
             }
 //            guard let record = record else {return}
 //            let contact = Contact(ckRecord: record)
-            self.contact = contact 
+            self.contact = contact
             completion?(contact)
         }
     }
@@ -47,6 +53,7 @@ class ContactController{
             }
             guard let records = records else {return}
             let contacts: [Contact] = records.compactMap{Contact(ckRecord: $0)}
+            self.contacts = contacts
             completion(contacts)
         }
     }
