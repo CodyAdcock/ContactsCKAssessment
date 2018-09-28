@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ContactsCKAssessment/Model Controller/ContactController.swift"
+            timestampString = "559848111.863216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "createContact(name:phoneNumber:email:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ContactsCKAssessment/Model Controller/ContactController.swift"
+            timestampString = "559848115.4993089"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "createContact(name:phoneNumber:email:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactsCKAssessment.ContactController.createContact(name: Swift.String, phoneNumber: Swift.String, email: Swift.String, completion: Swift.Optional&lt;(Swift.Optional&lt;ContactsCKAssessment.Contact&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "ContactsCKAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cody/Documents/GitHub/ContactsCKAssessment/ContactsCKAssessment/Model%20Controller/ContactController.swift"
+                  timestampString = "559848115.720866"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "543">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.CKRecord&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ContactsCKAssessment.ContactController.createContact(name: Swift.String, phoneNumber: Swift.String, email: Swift.String, completion: Swift.Optional&lt;(Swift.Optional&lt;ContactsCKAssessment.Contact&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "ContactsCKAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cody/Documents/GitHub/ContactsCKAssessment/ContactsCKAssessment/Model%20Controller/ContactController.swift"
+                  timestampString = "559848115.7250201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
