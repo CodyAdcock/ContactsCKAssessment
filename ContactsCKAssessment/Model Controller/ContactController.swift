@@ -28,7 +28,7 @@ class ContactController{
         let contact = Contact(name: name, phoneNumber: phoneNumber, email: email)
         self.contacts.append(contact)
         
-        CKContainer.default().publicCloudDatabase.save(CKRecord(contact: contact)) { (record, error) in
+        CKContainer.default().privateCloudDatabase.save(CKRecord(contact: contact)) { (record, error) in
             if let error = error{
                 print("🤬 There was an error in \(#function) ; \(error) ; \(error.localizedDescription) 🤬")
                 completion?(nil)
@@ -45,7 +45,7 @@ class ContactController{
         
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: Constants.ContactRecordType, predicate: predicate)
-        CKContainer.default().publicCloudDatabase.perform(query, inZoneWith: nil) { (records, error) in
+        CKContainer.default().privateCloudDatabase.perform(query, inZoneWith: nil) { (records, error) in
             if let error = error{
                 print("🤬 There was an error in \(#function) ; \(error) ; \(error.localizedDescription) 🤬")
                 completion(nil)
@@ -65,7 +65,7 @@ class ContactController{
         contact.email = email
         
         //update cloud
-        CKContainer.default().publicCloudDatabase.fetch(withRecordID: contact.ckRecordID) { (record, error) in
+        CKContainer.default().privateCloudDatabase.fetch(withRecordID: contact.ckRecordID) { (record, error) in
             if let error = error{
                 print("🤬 There was an error fetching in \(#function) ; \(error) ; \(error.localizedDescription) 🤬")
                 completion?(false)
@@ -83,7 +83,7 @@ class ContactController{
             operation.modifyRecordsCompletionBlock = {(records, recordIDS, error) in
                 completion?(true)
             }
-            CKContainer.default().publicCloudDatabase.add(operation)
+            CKContainer.default().privateCloudDatabase.add(operation)
         }
     }
     
